@@ -6,3 +6,5 @@ Designed a web page on which we can perform various operations on notes.
 This website is designed to provide users with an easy-to-use platform for creating, modifying, and deleting notes
 online. So why use pen and paper when you can have all your notes in one place on this user-friendly website?
 Simplify your life with this note-making website and say goodbye to the hassle of paper notes forever.
+
+![Output](https://github.com/Gbirla06/Notes_Making_Site/blob/main/img/img2.PNG)
