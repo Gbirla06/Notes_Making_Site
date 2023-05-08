@@ -18,7 +18,8 @@ addBtn.addEventListener("click", function (e) {
 
         let myObj = {
             title: addTitle.value,
-            text: addTxt.value
+            text: addTxt.value,
+            isImp:false,
         }
         notesObj.push(myObj);
         localStorage.setItem("notes", JSON.stringify(notesObj));
@@ -44,7 +45,7 @@ function showNotes() {
                     <div class="d-flex>
                         <h5>class="card-title ">${element.title}</h5>
                         <div class="float-right">
-                            <span class="fa fa-star text-muted" id="star${index}" onclick="markImportant(this.id)"></span>
+                            <span class="fa fa-star ${element.isImp} ? Imp : nImp" id="${index}" onclick="markImportant(this.id)"></span>
                         </div>
                     </div>
                     <p class="card-text d-block">${element.text}</p>
@@ -67,18 +68,40 @@ function showNotes() {
 
 // mark as Important
 function markImportant(index){
-    console.log("mark");
-    if(star.classList.contains("text-warning"))
-    {
-        star.classList.remove("text-warning");
-        star.classList.add("text-muted");
-    }
-    else
-    {
-        star.classList.remove("text-warning");
-        star.classList.add("text-muted");
+
+   console.log(index)
+   const notes =  JSON.parse(localStorage.getItem('notes'))
+   console.log(notes[index])
+//    notes.forEach((ele,ind)=>{
+//     // console.log(ind)
+//     if(ind===index){
+//         console.log(ele)
+//         ele.isImp=true;
+
+//     }
+//    })
+
+   notes[index].isImp=true;
+   console.log(notes)
+
+   localStorage.setItem("notes", JSON.stringify(notes));
+   showNotes();
+   console.log(notes[index])
+
+    // isImpBtn=document.getElementById(`isImp-${index}`)
+    // console.log(isImpBtn)
+    // isImpBtn.innerHTML.backgroundColor="red";
+    // if(isImpBtn.classList.contains("text-warning"))
+    // {
+    //     isImpBtn.classList.remove("text-warning");
+    //     isImpBtn.classList.add("text-muted");
+    // }
+    // else
+    // {
+    //     isImpBtn.classList.remove("text-warning");
+    //     isImpBtn.classList.add("text-muted");
         
-    }
+    // }
 }
 
 // function to delete a Note
