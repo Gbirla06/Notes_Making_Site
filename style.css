@@ -35,7 +35,7 @@ body{
     
     background: fixed;
     background-size: 100%;
-    background-image: url('img/img1.jpg');
+    background-image: url('/img/img1.jpg');
 }
 @media only screen and (max-width:768px) {
     .inputCard{
