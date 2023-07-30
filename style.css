@@ -1,0 +1,48 @@
+.Imp{
+    color: darkorange;
+}
+.nImp{
+    color: darkgray;
+}
+.container{
+    
+}
+.inputCard{
+    /* margin: 0%; */
+    border: 3px solid black !important;
+    border-radius: 20px !important;
+    background: transparent;
+}
+
+#notes{
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    overflow-y: scroll;
+}
+.stars{
+    color:rgb(157, 157, 157);
+}
+.noteCard{
+    /* background: transparent; */
+    border: 3px solid black !important;
+    border-radius: 20px !important;
+    /* color: red; */
+    /* border: 5px;
+    border-color: yellow  ; */
+}
+body{
+    
+    background: fixed;
+    background-size: 100%;
+    background-image: url('/img/img1.jpg');
+}
+@media only screen and (max-width:768px) {
+    .inputCard{
+        display: block;
+        width: 100%;
+    }
+    #notes{
+        height: 100vh;
+    }
+}
