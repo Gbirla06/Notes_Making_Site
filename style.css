@@ -9,7 +9,7 @@
 }
 .inputCard{
     /* margin: 0%; */
-    border: 3px solid black !important;
+    border: 3px solid #b49e9e !important;
     border-radius: 20px !important;
     background: transparent;
 }
@@ -24,25 +24,20 @@
     color:rgb(157, 157, 157);
 }
 .noteCard{
-    /* background: transparent; */
-    border: 3px solid black !important;
+    height: 50%;
+    border: 3px solid #b49e9e !important;
     border-radius: 20px !important;
-    /* color: red; */
-    /* border: 5px;
-    border-color: yellow  ; */
+    
 }
 body{
     
     background: fixed;
     background-size: 100%;
-    background-image: url('/img/img1.jpg');
+    background-image: url('img/img1.jpg');
 }
 @media only screen and (max-width:768px) {
     .inputCard{
         display: block;
         width: 100%;
-    }
-    #notes{
-        height: 100vh;
     }
 }

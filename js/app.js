@@ -70,14 +70,6 @@ function markImportant(index){
    console.log(index)
    const notes =  JSON.parse(localStorage.getItem('notes'))
    console.log(notes[index])
-//    notes.forEach((ele,ind)=>{
-//     // console.log(ind)
-//     if(ind===index){
-//         console.log(ele)
-//         ele.isImp=true;
-
-//     }
-//    })
 
    notes[index].isImp=true;
    console.log(notes)
@@ -85,21 +77,6 @@ function markImportant(index){
    localStorage.setItem("notes", JSON.stringify(notes));
    showNotes();
    console.log(notes[index])
-
-    // isImpBtn=document.getElementById(`isImp-${index}`)
-    // console.log(isImpBtn)
-    // isImpBtn.innerHTML.backgroundColor="red";
-    // if(isImpBtn.classList.contains("text-warning"))
-    // {
-    //     isImpBtn.classList.remove("text-warning");
-    //     isImpBtn.classList.add("text-muted");
-    // }
-    // else
-    // {
-    //     isImpBtn.classList.remove("text-warning");
-    //     isImpBtn.classList.add("text-muted");
-        
-    // }
 }
 
 // function to delete a Note
@@ -115,6 +92,7 @@ function deleteNote(index) {
     showNotes();
 }
 
+// search
 let search = document.getElementById("searchTxt");
 search.addEventListener("input", function () {
 
